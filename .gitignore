@@ -3,3 +3,5 @@
 ################################################################################
 
 /BlazorHybridWPF/bin/Debug/net6.0-windows
+/BlazorHybridWPF/obj
+/.vs

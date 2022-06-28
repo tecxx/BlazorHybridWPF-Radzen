@@ -1,0 +1,25 @@
+﻿@inject DialogService dialogService
+@inject NotificationService notificationService
+
+<h1>MainPage</h1>
+
+@* uncomment to make sample work
+<RadzenDialog />
+<RadzenNotification />
+*@
+
+<RadzenButton Click="OpenDialog" Text="Open dialog" />
+<RadzenButton Click="ShowNotification" Text="Show Notification" />
+
+@code {
+    async Task OpenDialog()
+    {
+        var confirm = await dialogService.Confirm("Ya Sure?!", "Confirm");
+    }
+
+    void ShowNotification()
+    {
+        var message = new NotificationMessage { Summary = "Dummy Message" };
+        notificationService.Notify(message);
+    }
+}
